@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Первые штрихи — японская письменность</title><link rel="stylesheet" href="style.css"><script src="data.js" defer></script><script src="app.js" defer></script></head>
+<body><main><header><span class="brand">五 <span>ПЕРВЫЕ ШТРИХИ</span></span><span class="quiet">Японская письменность</span></header>
+<section class="intro"><h1>От образца — к памяти.</h1><p>Хирагана, катакана и 124 кандзи. Несколько спокойных минут письма.</p></section>
+<div class="layout"><aside id="library">
+<div class="tabs" aria-label="Письменность"><button data-script="hiragana" aria-pressed="true">Хирагана</button><button data-script="katakana" aria-pressed="false">Катакана</button><button data-script="kanji" aria-pressed="false">Кандзи</button></div>
+<label class="field">Найти знак<input id="search" type="search" placeholder="Знак, чтение или значение" autocomplete="off"></label>
+<label class="field">Группа<select id="section"></select></label><p id="catalog-note" class="quiet"></p><div id="letters" class="letters" aria-label="Выбор знака"></div>
+<p id="hidden-note" class="quiet" hidden>Список знаков скрыт. Выбирай задания кнопками «Назад» и «Дальше».</p><button id="all" hidden>Выйти из задания · открыть каталог</button>
+<details><summary>О наборе знаков</summary><p>В каждой азбуке — 46 основных знаков, звонкие и полузвонкие формы, малые знаки и дополнительные формы. Исторические и редкие формы вынесены отдельно. Сочетания вроде きゃ составляются из двух знаков.</p><p>124 кандзи — учебная подборка базовых знаков, а не официальный список JLPT. Для каждого дано одно слово; это не полный список чтений.</p></details></aside>
+<section class="paper" aria-label="Поле практики"><div class="topline"><span id="counter" class="quiet"></span><button id="lock" aria-pressed="false">Без прокрутки</button></div>
+<div class="task"><h2 id="task"></h2><p id="example"></p></div>
+<div class="row modes"><button id="trace" aria-pressed="true">По образцу</button><button id="memory" aria-pressed="false">По памяти</button><label class="switch"><input id="hide" type="checkbox">Скрыть образец</label></div>
+<div id="board" class="board"><canvas id="pad" width="900" height="900" aria-label="Рисуй знак пальцем, мышью или стилусом"></canvas><svg id="animation" viewBox="0 0 109 109" aria-hidden="true"></svg></div>
+<div class="row tools"><button id="undo">Отменить</button><button id="clear">Очистить</button><button id="hint" hidden>Показать ответ</button><button id="animate">Порядок черт</button><label class="width">Перо <input id="width" type="range" min="5" max="24" value="14" aria-label="Толщина пера"></label></div>
+<div class="row navigation"><button id="prev">← Назад</button><button id="next">Дальше →</button><button id="save" class="primary">Сохранить PNG</button></div><p id="status" class="quiet" role="status" aria-live="polite"></p>
+<div class="share row"><button id="link">Ссылка на это задание</button><button id="sheet">PNG всего задания</button></div><input id="link-output" readonly hidden aria-label="Ссылка на задание"></section></div>
+<footer><p>Рисунки хранятся в этом браузере. Для проверки прикрепи PNG в чат урока. Автоматической оценки и записи в журнал курса нет.</p><p>Образцы: <a href="https://kanjivg.tagaini.net/">KanjiVG</a> © Ulrich Apel и участники · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> · <a href="COPYING.txt">Лицензия</a>. Геометрия путей сохранена; изменены цвет и масштаб.</p></footer></main></body></html>
